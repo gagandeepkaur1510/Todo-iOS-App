@@ -69,5 +69,37 @@ class ViewController: UITableViewController {
         cell?.textLabel?.text = categories[indexPath.row].title
         return cell!
     }
+    
+    @IBAction func addCategoryClicked(_ sender: Any) {
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
+        let addAction = UIAlertAction(title: "Add", style: .default) { (action) in
+            let categoryNames = self.categories.map {$0.title}
+            guard !categoryNames.contains(textField.text) else {self.showAlert(); return}
+            let newCategory = Category(context: self.context)
+            newCategory.title = textField.text!
+            self.categories.append(newCategory)
+            self.save()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        // change the font color of cancel action
+        cancelAction.setValue(UIColor.orange, forKey: "titleTextColor")
+        
+        alert.addAction(addAction)
+        alert.addAction(cancelAction)
+        alert.addTextField { (field) in
+            textField = field
+            textField.placeholder = "Category Name"
+        }
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Name Taken", message: "Please choose another name", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        okAction.setValue(UIColor.orange, forKey: "titleTextColor")
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 

@@ -29,7 +29,13 @@
                             <outlet property="delegate" destination="QdG-oR-t5c" id="u7a-s0-2Lt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="FVI-SR-leA"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="FVI-SR-leA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kz5-at-Jed">
+                            <connections>
+                                <action selector="addCategoryClicked:" destination="QdG-oR-t5c" id="0k9-hq-D1q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEK-0t-Pve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
