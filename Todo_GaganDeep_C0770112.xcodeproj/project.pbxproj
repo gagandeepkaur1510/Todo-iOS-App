@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041F3C0624A99A7100E5FA9D /* MoveToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F3C0524A99A7100E5FA9D /* MoveToViewController.swift */; };
+		041F3C0824A9A2AD00E5FA9D /* applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F3C0724A9A2AD00E5FA9D /* applelogo.png */; };
 		0481DE0A24A8422300B23139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481DE0924A8422300B23139 /* AppDelegate.swift */; };
 		0481DE0C24A8422300B23139 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481DE0B24A8422300B23139 /* SceneDelegate.swift */; };
 		0481DE0E24A8422300B23139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481DE0D24A8422300B23139 /* ViewController.swift */; };
@@ -14,9 +16,13 @@
 		0481DE1424A8422300B23139 /* Todo_GaganDeep_C0770112.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0481DE1224A8422300B23139 /* Todo_GaganDeep_C0770112.xcdatamodeld */; };
 		0481DE1624A8422600B23139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0481DE1524A8422600B23139 /* Assets.xcassets */; };
 		0481DE1924A8422600B23139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0481DE1724A8422600B23139 /* LaunchScreen.storyboard */; };
+		04D9DE7E24A84B520056F0D8 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9DE7D24A84B520056F0D8 /* TodoListViewController.swift */; };
+		04D9DE8024A852430056F0D8 /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9DE7F24A852430056F0D8 /* TodoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041F3C0524A99A7100E5FA9D /* MoveToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToViewController.swift; sourceTree = "<group>"; };
+		041F3C0724A9A2AD00E5FA9D /* applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applelogo.png; path = ../../../Downloads/applelogo.png; sourceTree = "<group>"; };
 		0481DE0624A8422300B23139 /* Todo_GaganDeep_C0770112.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo_GaganDeep_C0770112.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0481DE0924A8422300B23139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0481DE0B24A8422300B23139 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		0481DE1524A8422600B23139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0481DE1824A8422600B23139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0481DE1A24A8422600B23139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D9DE7D24A84B520056F0D8 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		04D9DE7F24A852430056F0D8 /* TodoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +66,18 @@
 		0481DE0824A8422300B23139 /* Todo_GaganDeep_C0770112 */ = {
 			isa = PBXGroup;
 			children = (
+				041F3C0724A9A2AD00E5FA9D /* applelogo.png */,
 				0481DE0924A8422300B23139 /* AppDelegate.swift */,
 				0481DE0B24A8422300B23139 /* SceneDelegate.swift */,
 				0481DE0D24A8422300B23139 /* ViewController.swift */,
 				0481DE0F24A8422300B23139 /* Main.storyboard */,
+				04D9DE7D24A84B520056F0D8 /* TodoListViewController.swift */,
 				0481DE1524A8422600B23139 /* Assets.xcassets */,
 				0481DE1724A8422600B23139 /* LaunchScreen.storyboard */,
 				0481DE1A24A8422600B23139 /* Info.plist */,
 				0481DE1224A8422300B23139 /* Todo_GaganDeep_C0770112.xcdatamodeld */,
+				04D9DE7F24A852430056F0D8 /* TodoDetailViewController.swift */,
+				041F3C0524A99A7100E5FA9D /* MoveToViewController.swift */,
 			);
 			path = Todo_GaganDeep_C0770112;
 			sourceTree = "<group>";
@@ -131,6 +143,7 @@
 				0481DE1924A8422600B23139 /* LaunchScreen.storyboard in Resources */,
 				0481DE1624A8422600B23139 /* Assets.xcassets in Resources */,
 				0481DE1124A8422300B23139 /* Main.storyboard in Resources */,
+				041F3C0824A9A2AD00E5FA9D /* applelogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +156,11 @@
 			files = (
 				0481DE0E24A8422300B23139 /* ViewController.swift in Sources */,
 				0481DE1424A8422300B23139 /* Todo_GaganDeep_C0770112.xcdatamodeld in Sources */,
+				041F3C0624A99A7100E5FA9D /* MoveToViewController.swift in Sources */,
 				0481DE0A24A8422300B23139 /* AppDelegate.swift in Sources */,
 				0481DE0C24A8422300B23139 /* SceneDelegate.swift in Sources */,
+				04D9DE7E24A84B520056F0D8 /* TodoListViewController.swift in Sources */,
+				04D9DE8024A852430056F0D8 /* TodoDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

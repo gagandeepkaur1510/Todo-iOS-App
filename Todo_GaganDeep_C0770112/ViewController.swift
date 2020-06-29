@@ -8,15 +8,19 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class ViewController: UITableViewController {
     
     var categories = [Category]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var selectedCategory: Category?
+    var archivedCategory: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
+        setupNotification()
     }
     
     func loadCategories() {
@@ -32,6 +36,7 @@ class ViewController: UITableViewController {
         {
             if category.title == "Archived"
             {
+                archivedCategory = category
                 cond = false
                 break
             }
@@ -40,6 +45,7 @@ class ViewController: UITableViewController {
         {
             let category = Category(context: context)
             category.title = "Archived"
+            archivedCategory = category
             categories.append(category)
             save()
         }
@@ -82,7 +88,6 @@ class ViewController: UITableViewController {
             self.save()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        // change the font color of cancel action
         cancelAction.setValue(UIColor.orange, forKey: "titleTextColor")
         
         alert.addAction(addAction)
@@ -100,6 +105,31 @@ class ViewController: UITableViewController {
         okAction.setValue(UIColor.orange, forKey: "titleTextColor")
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCategory = categories[indexPath.row]
+        performSegue(withIdentifier: "totodolist", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tlvc = segue.destination as? TodoListViewController
+        {
+            tlvc.selectedCategory = selectedCategory
+            tlvc.archivedCategroy = archivedCategory
+        }
+    }
+    
+    func setupNotification()
+    {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) {
+            (granted, error) in
+            if granted {
+                print("yes")
+            } else {
+                print("no")
+            }
+        }
     }
 }
 
